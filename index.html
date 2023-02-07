@@ -1,107 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Land and Flat Cost Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>যৌথ উদ্যোগে বাড়ি নির্মাণ</h1>
-    
+
     <!-- calculator container starts -->
-    
+
     <div class="calculator-container">
+      <h3 class="heading">Land and Flat Cost Calculator</h3>
 
-        <h3 class="heading">Land and Flat Cost Calculator</h3>
-        
-        <div class="input land-location">
-            <h3>Land Location</h3>
-            <input type="text" id="land-location" required>
-        </div>
-        
-        <div class="input land-size">
-            <h3>Size of the land in Katha</h3>
-            <input type="number" id="land-size" required>
-        </div>
-        
-        <div class="input land-price-unit">
-            <h3>Price of the land in Katha</h3>
-            <input type="number" id="price-per-katha" required>
-        </div>
+      <div class="input land-location">
+        <h3>Land Location</h3>
+        <input type="text" id="land-location" required />
+      </div>
 
-        <div class="input land-price-whole">
-            <h3>Total Land Price</h3>
-            <input type="number" id="price-whole-land" required>
-        </div>
-        
-        <div class="input floor-count">
-            <h3>Floor Count</h3>
-            <input type="number" id="floor-count" required>
-        </div>
-        
-        <div class="input share-count">
-            <h3>Share Count</h3>
-            <input type="number" id="share-count" required>
-        </div>
+      <div class="input land-size">
+        <h3>Size of the land in Katha</h3>
+        <input type="number" id="land-size" required />
+      </div>
 
-        <div class="buttons">
-            <button class="btn calculate" id="calculate">Caculate</button>
-            <button class="btn clear" id="clear">Clear</button>
-        </div>
+      <div class="input land-price-unit">
+        <h3>Price of the land in Katha</h3>
+        <input type="number" id="price-per-katha" required />
+      </div>
 
+      <div class="input land-price-whole">
+        <h3>Total Land Price</h3>
+        <input type="number" id="price-whole-land" required />
+      </div>
+
+      <div class="input floor-count">
+        <h3>Floor Count</h3>
+        <input type="number" id="floor-count" required />
+      </div>
+
+      <div class="input share-count">
+        <h3>Share Count</h3>
+        <input type="number" id="share-count" required />
+      </div>
+
+      <div class="buttons">
+        <button class="btn calculate" id="calculate">Caculate</button>
+        <button class="btn clear" id="clear">
+          <a href="./DetailFlatPlan.html" target="_blank">DFP</a>
+        </button>
+      </div>
     </div>
-    
-    <!-- calculator container endss -->
 
+    <!-- calculator container endss -->
 
     <!-- result starts -->
 
     <div class="result-container information">
-        <h2>Information</h2>
-        <table class="info">
-            <thead>
-                <tr class="table-head">
-                    <th>SL.</th>
-                    <th>Location</th>
-                    <th>Land Size</th>
-                    <th>Per Katha</th>
-                    <th>Total Price</th>
-                    <th>Floor Count</th>
-                    <th>Share Count</th>
-                    <th>Total Size</th>
-                    <th>Flat Size Inc Common</th>
-                    <th>Flat Size Exc Common</th>
-                </tr>
-            </thead>
-
-            
-        </table>
+      <h2>Information</h2>
+      <table class="info">
+        <thead>
+          <tr class="table-head">
+            <th>SL.</th>
+            <th>Location</th>
+            <th>Land Size</th>
+            <th>Per Katha</th>
+            <th>Total Price</th>
+            <th>Floor Count</th>
+            <th>Share Count</th>
+            <th>Total Size</th>
+            <th>Flat Size Inc Common</th>
+            <th>Flat Size Exc Common</th>
+          </tr>
+        </thead>
+      </table>
     </div>
 
-    <div class="result-container costing">    
-        <table class="cost">
-            <h2>Cost</h2>
-            <thead>
-                <tr class="table-head">
-                    <th>SL</th>
-                    <th>Construction Cost / SqrFt</th>
-                    <th>Land Cost / Share</th>
-                    <th>Construction Cost / Share</th>
-                    <th>Total Cost / Share</th>
-                    <th>Total Cost / SqrFt</th>
-                    <th>Down Payment</th>
-                    <th>Monthly installments</th>
-                </tr>
-            </thead>
-            
-        </table>
+    <div class="result-container costing">
+      <table class="cost">
+        <h2>Cost</h2>
+        <thead>
+          <tr class="table-head">
+            <th>SL</th>
+            <th>Construction Cost / SqrFt</th>
+            <th>Land Cost / Share</th>
+            <th>Construction Cost / Share</th>
+            <th>Total Cost / Share</th>
+            <th>Total Cost / SqrFt</th>
+            <th>Down Payment</th>
+            <th>Monthly installments</th>
+          </tr>
+        </thead>
+      </table>
     </div>
 
     <!-- result ends -->
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

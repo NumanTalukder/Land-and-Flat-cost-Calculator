@@ -1,0 +1,52 @@
+div.calculator_form {
+  width: auto;
+  font-family: Arial;
+  position: relative;
+  z-index: 1;
+  background: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.spellingBoxAbove,
+.tabsAbove {
+  margin-top: 0 !important;
+  border-top-left-radius: 0 !important;
+}
+user agent stylesheet div {
+  display: block;
+}
+#mainContent {
+  width: 945px;
+  padding: 0 20px 0 25px;
+  text-align: left;
+  text-align: -webkit-left;
+  margin-top: 0;
+  display: flex;
+}
+#wrapper {
+  font-size: 102%;
+  background-color: #fff;
+  width: auto;
+  margin: 0 auto;
+  text-align: -webkit-center;
+  height: auto;
+  min-height: 1350px;
+}
+#footer,
+#menu_m li,
+#wrapper,
+body {
+  text-align: center;
+}
+body {
+  font-family: Arial, sans-serif;
+  font-size: 78%;
+  line-height: 1.5;
+  color: #555;
+  margin: 0;
+  padding: 0;
+}
