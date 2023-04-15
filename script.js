@@ -2,6 +2,7 @@ let landLocation = document.getElementById('land-location')
 let landSize = document.getElementById('land-size')
 let pricePerKatha = document.getElementById('price-per-katha')
 let priceLand = document.getElementById('price-whole-land')
+let far = document.getElementById('far')
 let floorCount = document.getElementById('floor-count')
 let shareCount = document.getElementById('share-count')
 const calulateBtn = document.getElementById('calculate')
@@ -44,11 +45,13 @@ function calculate() {
         <td>${numberWithCommas((priceLand.value / 1).toFixed(2))}</td>
         <td>${floorCount.value}</td>
         <td>${shareCount.value}</td>
-        <td>${landSize.value * 3200}</td>
-        <td>${((landSize.value * 3200) / shareCount.value).toFixed(2)}</td>
+        <td>${landSize.value * 720 * far.value}</td>
+        <td>${((landSize.value * 720 * far.value) / shareCount.value).toFixed(
+          2
+        )}</td>
         <!-- common area is 1500 sqft in both ground floor and rooftop -->
         <td>${
-          ((landSize.value * 3200) / shareCount.value).toFixed(2) -
+          ((landSize.value * 720 * far.value) / shareCount.value).toFixed(2) -
           1500 / shareCount.value
         }</td>
     `
@@ -64,19 +67,20 @@ function calculate() {
           (priceLand.value / shareCount.value).toFixed(2)
         )}</td>
         <td>${numberWithCommas(
-          ((landSize.value * 3200) / shareCount.value).toFixed(2) * 2800
+          ((landSize.value * 720 * far.value) / shareCount.value).toFixed(2) *
+            2800
         )}</td>
         <td>${numberWithCommas(
           (
             priceLand.value / shareCount.value +
-            ((landSize.value * 3200) / shareCount.value) * 2800
+            ((landSize.value * 720 * far.value) / shareCount.value) * 2800
           ).toFixed(2)
         )}</td>
         <td>${numberWithCommas(
           (
             (priceLand.value / shareCount.value +
-              ((landSize.value * 3200) / shareCount.value) * 2800) /
-            ((landSize.value * 3200) / shareCount.value)
+              ((landSize.value * 720 * far.value) / shareCount.value) * 2800) /
+            ((landSize.value * 720 * far.value) / shareCount.value)
           ).toFixed(2)
         )}</td>
         <td>${numberWithCommas(
@@ -84,7 +88,10 @@ function calculate() {
         )}</td>
         <td>${numberWithCommas(
           (
-            (((landSize.value * 3200) / shareCount.value).toFixed(2) * 2800) /
+            (((landSize.value * 720 * far.value) / shareCount.value).toFixed(
+              2
+            ) *
+              2800) /
             36
           ).toFixed(2)
         )}</td>
