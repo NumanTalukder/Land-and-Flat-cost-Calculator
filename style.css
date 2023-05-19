@@ -133,6 +133,7 @@ a {
   align-items: center;
   justify-content: center;
   width: 80%;
+  margin-bottom: 10px;
 }
 
 table {

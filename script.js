@@ -46,14 +46,14 @@ function calculate() {
         <td>${floorCount.value}</td>
         <td>${shareCount.value}</td>
         <td>${landSize.value * 720 * far.value}</td>
+        <!-- common area is 1500 sqft in both ground floor and rooftop -->
+        <td>${(
+          (landSize.value * 720 * far.value) / shareCount.value +
+          1500 / shareCount.value
+        ).toFixed(2)}</td>
         <td>${((landSize.value * 720 * far.value) / shareCount.value).toFixed(
           2
         )}</td>
-        <!-- common area is 1500 sqft in both ground floor and rooftop -->
-        <td>${
-          ((landSize.value * 720 * far.value) / shareCount.value).toFixed(2) -
-          1500 / shareCount.value
-        }</td>
     `
 
   const costData = document.createElement('tr')
