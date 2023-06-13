@@ -5,6 +5,7 @@ let priceLand = document.getElementById('price-whole-land')
 let far = document.getElementById('far')
 let floorCount = document.getElementById('floor-count')
 let shareCount = document.getElementById('share-count')
+let completionTime = document.getElementById('completion-time')
 const calulateBtn = document.getElementById('calculate')
 const clearBtn = document.getElementById('clear')
 const infoTable = document.querySelector('.info')
@@ -13,7 +14,7 @@ const tableRows = document.querySelectorAll('.table-data')
 let serial = tableRows.length
 
 console.log('Total Common: 1500sqft is divided into each share')
-console.log('Project complition is estimeted to 3 years')
+// console.log('Project complition is estimeted to 3 years')
 
 calulateBtn.addEventListener('click', calculate)
 
@@ -92,7 +93,7 @@ function calculate() {
               2
             ) *
               2800) /
-            36
+            (completionTime.value * 12)
           ).toFixed(2)
         )}</td>
 
