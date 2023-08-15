@@ -6,6 +6,7 @@ let far = document.getElementById('far')
 let floorCount = document.getElementById('floor-count')
 let shareCount = document.getElementById('share-count')
 let completionTime = document.getElementById('completion-time')
+let constructionCost = document.getElementById('construction-cost')
 const calulateBtn = document.getElementById('calculate')
 const clearBtn = document.getElementById('clear')
 const infoTable = document.querySelector('.info')
@@ -63,24 +64,26 @@ function calculate() {
 
   costData.innerHTML = `
         <td>${serial}</td>
-        <td>2800</td>
+        <td>${constructionCost.value}</td>
         <td>${numberWithCommas(
           (priceLand.value / shareCount.value).toFixed(2)
         )}</td>
         <td>${numberWithCommas(
           ((landSize.value * 720 * far.value) / shareCount.value).toFixed(2) *
-            2800
+            constructionCost.value
         )}</td>
         <td>${numberWithCommas(
           (
             priceLand.value / shareCount.value +
-            ((landSize.value * 720 * far.value) / shareCount.value) * 2800
+            ((landSize.value * 720 * far.value) / shareCount.value) *
+              constructionCost.value
           ).toFixed(2)
         )}</td>
         <td>${numberWithCommas(
           (
             (priceLand.value / shareCount.value +
-              ((landSize.value * 720 * far.value) / shareCount.value) * 2800) /
+              ((landSize.value * 720 * far.value) / shareCount.value) *
+                constructionCost.value) /
             ((landSize.value * 720 * far.value) / shareCount.value)
           ).toFixed(2)
         )}</td>
@@ -92,7 +95,7 @@ function calculate() {
             (((landSize.value * 720 * far.value) / shareCount.value).toFixed(
               2
             ) *
-              2800) /
+              constructionCost.value) /
             (completionTime.value * 12)
           ).toFixed(2)
         )}</td>
@@ -160,9 +163,9 @@ function numberWithCommas(x) {
 //         <td>${serial}</td>
 //         <td>2800</td>
 //         <td>${(priceLand.value / shareCount.value).toFixed(2)}</td>
-//         <td>${(((landSize.value * 3200) / shareCount.value).toFixed(2)) * 2800}</td>
-//         <td>${((priceLand.value / shareCount.value) + (((landSize.value * 3200) / shareCount.value)) * 2800).toFixed(2)}</td>
-//         <td>${(((priceLand.value / shareCount.value) + ((landSize.value * 3200) / shareCount.value) * 2800) / (((landSize.value * 3200) / shareCount.value))).toFixed(2)}</td>
+//         <td>${(((landSize.value * 3200) / shareCount.value).toFixed(2)) * constructionCost.value}</td>
+//         <td>${((priceLand.value / shareCount.value) + (((landSize.value * 3200) / shareCount.value)) * constructionCost.value).toFixed(2)}</td>
+//         <td>${(((priceLand.value / shareCount.value) + ((landSize.value * 3200) / shareCount.value) * constructionCost.value) / (((landSize.value * 3200) / shareCount.value))).toFixed(2)}</td>
 //         `
 //     ));
 //     localStorage.setItem('table2', JSON.stringify(secondTable));
